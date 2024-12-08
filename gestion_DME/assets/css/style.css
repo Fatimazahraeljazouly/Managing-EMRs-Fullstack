@@ -1,0 +1,729 @@
+/* *{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(158, 205, 225);
+    padding: 20px 60px ;
+    box-shadow: 0 4px 8px rgba(23, 65, 112, 0.2);
+     top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+}
+header ul{
+    display: flex;
+}
+header ul li {
+    list-style: none;
+    margin-left: 15px;
+
+}
+header ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgb(52, 95, 121);
+    font-weight: 400;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    
+}
+header ul li a:hover{
+    color: rgb(18, 103, 132);
+    background-color: rgb(115, 145, 164);
+    border-radius: 20px;
+    padding: 4px;
+    transition: 1s;
+    
+}
+
+
+header ul li ul  {
+display: block;
+  position: absolute;
+  left: 15px;
+  top: calc(100% + 30px);
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  padding: 10px 0;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: 0.3s;
+} */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*::selection{
+    background: #7a9ebe;
+    color: rgb(27, 83, 146) ;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(4, 38, 75);
+    padding: 20px 60px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Pour s'assurer que l'en-tête est au-dessus des autres éléments */
+}
+
+
+
+header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header ul li {
+    margin: 0 10px;
+    margin-top: 20px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: rgb(103, 144, 185);
+    word-spacing: 5px;
+    padding: 5px 10px;
+    border-radius: 6px;
+}
+
+header ul li a:hover {
+    background-color: rgba(136, 188, 243, 0.877);
+    color:  rgb(6, 35, 68);
+    transition: 1s;
+    letter-spacing: 1.5px;
+}
+
+header ul li ul {
+    display: none;
+    position: absolute;
+    background-color:  rgba(6, 35, 68, 0.831);
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(23, 65, 112, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+header ul li:hover ul {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+header ul li ul li {
+    margin: 5px 0;
+}
+
+header ul li ul li a {
+    padding: 5px 10px;
+    display: block;
+}
+header h1{
+    margin: 0 10px;
+    margin-top: 10px;
+    margin-left: -10px;
+}
+header h1 a {
+
+    text-decoration: none;
+    color: rgb(169, 179, 199);
+    text-transform: capitalize;
+    font-weight: 500;
+    letter-spacing: 3px;
+    font-size: 25px;   
+}
+ /* styling the slider imgs */
+
+ main {
+    margin-top: 100px; /* Keep space for the header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px); /* Utilize available height minus header space */
+}
+
+.slidercontainer {
+    width:100%; /* Take full width of the page */
+    height:600px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+    width: 100%; /* Each image takes full width of the slider container */
+    height: auto;
+}
+
+.prev,
+.next {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    padding: 15px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+/* styling des infos du GMDE */
+
+.infoDME {
+    max-width: 89%; /* Largeur maximale du contenu pour le centrer */
+    margin: auto; /* Centre horizontalement */
+    margin-top: 40px;
+    transition: 1s;
+
+    padding: 30px;
+    background-color: #9cc8e1;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(23, 65, 112, 0.1);
+    text-align: center; /* Centre le texte horizontalement */
+}
+
+.infoDME h2 {
+    transition: 1s;
+
+    text-transform: uppercase;
+    margin: 0 auto; /* Centre horizontalement */
+
+    color: rgb(23, 65, 112);
+}
+
+.infoDME h3 {
+    transition: 1s;
+
+    text-transform: uppercase;
+    color: rgb(23, 65, 112);
+}
+.infoDME img{
+    margin: 20px auto; /* Centre l'image horizontalement et ajoute une marge verticale */
+    visibility: visible;
+    display: block;
+
+}
+.infoDME p{
+    font-weight: 600;
+    text-align: justify;
+    transition: 1s;
+    font-size: 18px;
+    line-height: 2;
+    color: #333;
+    letter-spacing: 1.5px;
+    
+}
+
+/* .infoDME  p {
+    font-size: 20px;
+    letter-spacing: 3px;
+    line-height: 2;
+    color: #333;
+    padding: 10px;
+} */
+.mission-content{
+    animation: infinite;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    margin-top: 50px;
+    margin-left: 20px;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+}
+.mission-content .text {
+    width: 45%;
+}
+.mission-content .text h2{
+    margin-left: 30%;
+    color: rgb(103, 144, 185);
+    font-size: 30px;
+    align-content: center;
+    justify-content: center;
+}
+.mission-content .text p{
+    font-weight: 500;
+    transition: 1s;
+    font-size: 18px;
+    line-height: 2;
+    color: #333;
+    letter-spacing: 1.5px;
+    
+
+}
+.mission-content .text p::first-letter{
+font-size: 30px;
+font-weight: 500;
+color: rgb(103, 144, 185);
+font-style: italic;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.vision-content {
+    margin-top: 60px;
+    display: flex;
+    width: 95%;
+    margin-left: 20px;
+    justify-content: space-between;
+}
+.vision-content .text {
+    width: 45%;
+}
+.vision-content .text h2{
+    margin-left: 30%;
+    color: rgb(103, 144, 185);
+    font-size: 30px;
+    align-content: center;
+    justify-content: center;
+}
+.vision-content .text p{
+    padding-left: 20px;
+    font-weight: 500;
+    transition: 1s;
+    font-size: 18px;
+    line-height: 2;
+    color: #333;
+    letter-spacing: 1.5px;
+    
+
+}
+.vision-content .text p::first-letter{
+font-size: 30px;
+font-weight: 500;
+color: rgb(103, 144, 185);
+font-style: italic;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#counts .rowcounters{
+    display: flex;
+justify-content: center;
+width: 100%;
+
+}
+#counts .rowcounters .cont{
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 50px;
+text-align: center;
+border-radius: 10%;
+margin-right: 80px;
+transition: background-color 0.3s ease;
+
+}
+#counts .rowcounters .cont:hover{
+    background-color: #9cc8e1;
+
+}
+#counts .rowcounters .cont span ,p{
+    font-size: 25px;
+    font-weight: 800;
+    text-transform: capitalize;
+}
+
+footer .containerr{
+    padding: 20px 40px;
+    display: flex;
+    background-color: rgb(2, 19, 37);
+
+}
+footer .containerr .descreptionn {
+display: block;
+width: 500px;
+
+}
+footer .containerr .descreptionn p{
+    text-transform: capitalize;
+    font-size: 17px;
+    font-weight: 400;
+    text-align: justify;
+    letter-spacing: 1.3px;
+    line-height: 1.6;
+    color: rgb(143, 139, 139);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+footer .containerr .descreptionn h2{
+    text-align: center;
+    color: rgb(103, 144, 185);
+    letter-spacing: 1px;
+    line-height: 1.6;
+    font-size: 21px;
+    font-weight: 700;
+}
+footer .containerr .contactInfos ul {
+    display: block;
+    width: 300px;
+
+}
+footer .containerr .contactInfos ul li{
+    list-style: none;
+    padding-top: 18px;
+}
+footer .containerr .contactInfos ul li a {
+    font-size: 14px;
+   text-align: justify;
+   color: rgb(143, 139, 139);
+   text-decoration: none;
+   letter-spacing: 2px;
+
+}footer .containerr
+ .social-links-horr{
+    display: block;
+}
+
+.social-links-horr .Horaires p{
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1.3px;
+    line-height: 1.6;
+    color: rgb(143, 139, 139);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+.social-links-horr .Horaires h2{
+    text-align: center;
+    color: rgb(103, 144, 185);
+    letter-spacing: 1px;
+    line-height: 1.6;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+ footer .social-links{
+    margin-left: 12px;
+    }
+    
+   footer  .social-links .btn {
+        display: block;
+        margin-top: 8px;
+        font-size: 1em;
+        padding: 10px;
+        border-radius: 50%;
+        width: 45px;
+        color: #7a9ebe;
+        border-color: #7a9ebe;
+    }
+   footer  .social-links .btn:hover{
+        background-color: #7a9ebe;
+        border-color: #333;
+        color: #333;
+    }
+
+    @media (max-width: 768px) {
+        header {
+            flex-direction: column;
+            padding: 10px;
+        }
+    
+        header ul {
+            flex-direction: column;
+            margin-top: 10px;
+        }
+    
+        header ul li {
+            margin: 10px 0;
+        }
+    
+        header h1 {
+            margin: 10px 0;
+            font-size: 20px;
+        }
+    }
+    @media (max-width: 768px) {
+        .slidercontainer {
+            height: 400px;
+        }
+    
+        .prev, .next {
+            font-size: 16px;
+            width: 40px;
+            height: 40px;
+        }
+    }
+    @media (max-width: 768px) {
+        .infoDME {
+            padding: 15px;
+            font-size: 16px;
+        }
+    }
+    @media (max-width: 768px) {
+        .mission-content, .vision-content {
+            flex-direction: column;
+        }
+    
+        .mission-content .text, .vision-content .text {
+            width: 100%;
+            margin: 0;
+        }
+    
+        .mission-content .text h2, .vision-content .text h2 {
+            margin-left: 0;
+            font-size: 24px;
+        }
+    }
+    @media (max-width: 768px) {
+        #counts .rowcounters {
+            flex-direction: column;
+        }
+    
+        #counts .rowcounters .cont {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+    }
+    @media (max-width: 768px) {
+        footer .containerr {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        footer .containerr .descreptionn, 
+        footer .containerr .contactInfos {
+            width: 100%;
+            text-align: center;
+            margin: 10px 0;
+        }
+    
+        footer .containerr .contactInfos ul {
+            padding: 0;
+        }
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(4, 38, 75);
+        padding: 20px 60px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+    }
+    
+    header ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    
+    header ul li {
+        margin: 0 10px;
+    }
+    
+    header ul li a {
+        text-decoration: none;
+        color: rgb(103, 144, 185);
+        word-spacing: 5px;
+        padding: 5px 10px;
+        border-radius: 6px;
+    }
+    
+    header ul li a:hover {
+        background-color: rgba(136, 188, 243, 0.877);
+        color: rgb(6, 35, 68);
+        transition: 0.3s;
+        letter-spacing: 1.5px;
+    }
+    
+    header ul li ul {
+        display: none;
+        position: absolute;
+        background-color: rgba(6, 35, 68, 0.831);
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(23, 65, 112, 0.2);
+    }
+    
+    header ul li:hover ul {
+        display: block;
+    }
+    
+    header ul li ul li {
+        margin: 5px 0;
+    }
+    
+    header ul li ul li a {
+        padding: 5px 10px;
+        display: block;
+    }
+    
+    header h1 {
+        margin: 0;
+        font-size: 25px;
+    }
+    
+    header h1 a {
+        text-decoration: none;
+        color: rgb(169, 179, 199);
+        font-weight: 500;
+        letter-spacing: 3px;
+        font-size: 25px;
+    }
+    @media (max-width: 768px) {
+        header {
+            flex-direction: column;
+            padding: 1px;
+        }
+    
+        header ul {
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+        }
+    
+        header ul li {
+            margin: 5px 0;
+        }
+        header h1 {
+            font-size: 20px;
+            text-align: center;
+        }
+    
+        header ul li ul {
+            position: static;
+            background-color: rgba(6, 35, 68, 0.831);
+        }
+    
+        header ul li:hover ul {
+            display: block;
+        }
+    }
+    footer {
+        background-color: rgb(2, 19, 37);
+        padding: 20px 40px;
+        color: rgb(143, 139, 139);
+    }
+    
+    footer .containerr {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    footer .containerr .descreptionn {
+        width: 500px;
+    }
+    
+    footer .containerr .descreptionn p {
+        text-transform: capitalize;
+        font-size: 17px;
+        font-weight: 400;
+        text-align: justify;
+        letter-spacing: 1.3px;
+        line-height: 1.6;
+        color: rgb(143, 139, 139);
+    }
+    
+    footer .containerr .descreptionn h2 {
+        text-align: center;
+        color: rgb(103, 144, 185);
+        letter-spacing: 1px;
+        line-height: 1.6;
+        font-size: 21px;
+        font-weight: 700;
+    }
+    
+    footer .containerr .contactInfos ul {
+        display: block;
+        width: 300px;
+    }
+    
+    footer .containerr .contactInfos ul li {
+        list-style: none;
+        padding-top: 18px;
+    }
+    
+    footer .containerr .contactInfos ul li a {
+        font-size: 14px;
+        color: rgb(143, 139, 139);
+        text-decoration: none;
+        letter-spacing: 2px;
+    }
+    
+    footer .social-links {
+        display: flex;
+    }
+    
+    footer .social-links .btn {
+        font-size: 1em;
+        padding: 10px;
+        border-radius: 50%;
+        width: 45px;
+        color: #7a9ebe;
+        border-color: #7a9ebe;
+    }
+    
+    footer .social-links .btn:hover {
+        background-color: #7a9ebe;
+        border-color: #333;
+        color: #333;
+    }
+    footer .social-links-horr .social-links{
+        display:   block  ;
+    }
+    @media (max-width: 900px) {
+        footer .social-links-horr .social-links{
+            display:   flex  ;
+        }
+    }
+    @media (max-width: 768px) {
+        footer .containerr {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        footer .containerr .descreptionn,
+        footer .containerr .contactInfos {
+            width: 100%;
+            text-align: center;
+            margin: 10px 0;
+        }
+    
+        footer .containerr .contactInfos ul {
+            padding: 0;
+        }
+        footer .social-links {
+            justify-content: center;
+            margin-top: 10px;
+        }
+    }
+
+    
+    header ul li a.active {
+        background-color: #007bff; /* Couleur de fond pour le lien actif */
+        color: #fff; /* Couleur du texte pour le lien actif */
+    }
+    

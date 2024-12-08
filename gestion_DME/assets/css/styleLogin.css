@@ -1,0 +1,75 @@
+/* *{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    background-color: rgba(97, 123, 150, 0.877);
+
+}
+.login-content{
+    box-shadow: 6px 8px 12px rgba(23, 65, 112, 0.2);
+    font-size: 20px;
+    border-radius: 2%;
+    width: 50%;
+    height: 400px;
+    margin: 10% 30% 0 25% ;
+background-color:  rgb(6, 35, 68);
+}
+.login-content .login-form{
+    padding: 2.5% 30% 0 25% ;
+} */
+
+
+
+body {
+    background-color: rgba(97, 123, 150, 0.877);
+    font-family: 'Arial', sans-serif;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    background-color: #062344;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.login-card .form-control {
+    background-color: #071c34;
+    color: #9db0c0;
+    border: none;
+    border-radius: 10px;
+    margin-top: 5px;
+    padding: 10px;
+}
+
+.login-card .form-control::placeholder {
+    color: #9db0c0;
+    
+}
+
+.login-card label {
+    color: #9db0c0;
+}
+
+.login-card a {
+    color: #9db0c0;
+    text-decoration: none;
+}
+
+.login-card a:hover {
+    text-decoration: underline;
+}
+
+.login-card .btn-primary {
+    background-color: #0560c1;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+.login-card .btn-primary:hover{
+    background-color: #1975d7;
+    letter-spacing: 2px;
+    transition: 1s;
+}

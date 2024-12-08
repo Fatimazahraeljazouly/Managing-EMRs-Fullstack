@@ -1,0 +1,87 @@
+/* General Reset */
+body, h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+header ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+header li {
+  margin: 0 15px;
+}
+header a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Hero Section */
+#hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: #f4f4f4;
+}
+#hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+#hero p {
+  font-size: 1.2em;
+  color: #555;
+}
+
+/* Projects Section */
+#projects {
+  padding: 20px;
+}
+.project {
+  margin: 20px 0;
+  background: #eaeaea;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Contact Section */
+#contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f4f4f4;
+  border-radius: 5px;
+}
+#contact label {
+  display: block;
+  margin-bottom: 5px;
+}
+#contact input, #contact textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+#contact button {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+#contact button:hover {
+  background: #555;
+}
